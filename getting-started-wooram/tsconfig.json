@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "noImplicitAny": true // :any 라도 무조건 적는 설정, 귀찮으면 false;
+  }
+}

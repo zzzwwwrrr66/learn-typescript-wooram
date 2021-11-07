@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <div id="name"></div>
+  <div id="emali"></div>
+  <div id="address">
+
+  </div>
+  <script>
+    // var url = 'https://jsonplaceholder.typicode.com/users';
+    var url = 'https://jsonplaceholder.typicode.com/users/1';
+    
+
+
+    axios.get(url)
+    .then(function(res){
+      return res.data;
+    })
+    .then(function(data){
+      new User(data);
+    })
+    .catch(function(err){
+      console.log(err);
+    });
+
+
+    function User(data){
+      this.data = data;
+
+      this.init();
+    }
+    User.prototype = {
+      init(){
+        console.log(this.data);
+        this.sum(1,2);
+      },
+      html(){
+        
+      },
+      sum(a,b) {
+        console.log(a + b);
+      }
+    }
+  </script>
+
+</body>
+</html>
