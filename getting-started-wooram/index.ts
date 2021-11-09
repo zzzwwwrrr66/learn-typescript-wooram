@@ -31,11 +31,42 @@ function aa(a:string, b:string) {
   return a + b;
 }
 
-aa('2'); // stric CHECK!
 
 // 함수의 옵셔널 파라미터(선택적 파라미터)   ?: --> 넣어도되고 안넣어도됨
-function log(a: string, b ?:string) {
 
+
+
+// enum 읽기전용 값, 값이 변하지 않음, 딕셔너리같은걸로 사용해도될듯?
+enum Shoes { //숫자형 이넘 <- 아무것도 적지않으면 Nike = 0, Adidas = 1 이 할당된다.
+  Nike,
+  Adidas,
+}
+enum Shoes_02 { //숫자형 이넘 
+  Nike = '나이키',
+  Adidas = '아디다스'
 }
 
-log('1')
+console.log(Shoes_02.Nike);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
